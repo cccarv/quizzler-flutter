@@ -29,7 +29,21 @@ class QuizPage extends StatefulWidget {
 }
 
 class _QuizPageState extends State<QuizPage> {
-  List<Icon> scoreKeeper = [];
+  void checkAnswer(bool userPickedAnswer) {
+    setState(() {
+      bool correctAnswer = quizzBrain.getQuestionAnswer();
+
+      if (userPickedAnswer == correctAnswer) {
+        quizzBrain.setScoreKeeper(1);
+      } else {
+        quizzBrain.setScoreKeeper(0);
+      }
+
+      quizzBrain.isFinished(context);
+
+      quizzBrain.nextQuestion();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -67,17 +81,7 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
-                setState(() {
-                  bool correctAnswer = quizzBrain.getQuestionAnswer();
-
-                  if (correctAnswer == true) {
-                    scoreKeeper.add(Icon(Icons.check, color: Colors.green));
-                  } else {
-                    scoreKeeper.add(Icon(Icons.clear, color: Colors.red));
-                  }
-
-                  quizzBrain.nextQuestion();
-                });
+                checkAnswer(true);
               },
             ),
           ),
@@ -95,19 +99,7 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
-                setState(() {
-                  setState(() {
-                    bool correctAnswer = quizzBrain.getQuestionAnswer();
-
-                    if (correctAnswer == false) {
-                      scoreKeeper.add(Icon(Icons.check, color: Colors.green));
-                    } else {
-                      scoreKeeper.add(Icon(Icons.clear, color: Colors.red));
-                    }
-
-                    quizzBrain.nextQuestion();
-                  });
-                });
+                checkAnswer(false);
               },
             ),
           ),

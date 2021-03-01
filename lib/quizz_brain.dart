@@ -1,8 +1,10 @@
 import 'package:quizzler/question.dart';
-
+import 'package:rflutter_alert/rflutter_alert.dart';
 import 'question.dart';
+import 'package:flutter/material.dart';
 
 int _questionNumber = 0;
+List<Icon> scoreKeeper = [];
 
 class QuizzBrain {
   List<Question> _questionBank = [
@@ -49,5 +51,29 @@ class QuizzBrain {
 
   int getQuestionLenght() {
     return _questionBank.length;
+  }
+
+  void isFinished(context) {
+    if (_questionNumber + 1 == _questionBank.length) {
+      Alert(
+              context: context,
+              title: "Finished!",
+              desc: "You've reached the end of the quiz.")
+          .show();
+      reset();
+    }
+  }
+
+  void setScoreKeeper(isCorrect) {
+    if (isCorrect == 1) {
+      scoreKeeper.add(Icon(Icons.check, color: Colors.green));
+    } else {
+      scoreKeeper.add(Icon(Icons.clear, color: Colors.red));
+    }
+  }
+
+  void reset() {
+    _questionNumber = -1;
+    scoreKeeper = [];
   }
 }
