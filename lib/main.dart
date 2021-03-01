@@ -34,9 +34,9 @@ class _QuizPageState extends State<QuizPage> {
       bool correctAnswer = quizzBrain.getQuestionAnswer();
 
       if (userPickedAnswer == correctAnswer) {
-        quizzBrain.setScoreKeeper(1);
+        quizzBrain.setScoreKeeper(isCorrect: 1);
       } else {
-        quizzBrain.setScoreKeeper(0);
+        quizzBrain.setScoreKeeper(isCorrect: 0);
       }
 
       quizzBrain.isFinished(context);
