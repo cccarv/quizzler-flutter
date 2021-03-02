@@ -1,0 +1,404 @@
+define(['dart_sdk', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/painting/box_decoration.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/painting/border_radius.dart', 'packages/flutter/src/painting/box_border.dart', 'packages/flutter/src/material/colors.dart', 'packages/flutter/src/painting/gradient.dart'], (function load__packages__rflutter_alert__src__dialog_button_dart(dart_sdk, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__painting__box_decoration$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__painting__border_radius$46dart, packages__flutter__src__painting__box_border$46dart, packages__flutter__src__material__colors$46dart, packages__flutter__src__painting__gradient$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const box_decoration = packages__flutter__src__painting__box_decoration$46dart.src__painting__box_decoration;
+  const theme = packages__flutter__src__material__icon_button$46dart.src__material__theme;
+  const material = packages__flutter__src__material__icon_button$46dart.src__material__material;
+  const ink_well = packages__flutter__src__material__icon_button$46dart.src__material__ink_well;
+  const border_radius = packages__flutter__src__painting__border_radius$46dart.src__painting__border_radius;
+  const box_border = packages__flutter__src__painting__box_border$46dart.src__painting__box_border;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const gradient = packages__flutter__src__painting__gradient$46dart.src__painting__gradient;
+  var dialog_button = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    VoidTovoid: () => (T.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))(),
+    VoidToNvoid: () => (T.VoidToNvoid = dart.constFn(dart.nullable(T.VoidTovoid())))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 0,
+        [EdgeInsets_right]: 6,
+        [EdgeInsets_top]: 0,
+        [EdgeInsets_left]: 6
+      });
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 6,
+        [EdgeInsets_right]: 6,
+        [EdgeInsets_top]: 6,
+        [EdgeInsets_left]: 6
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 65,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.constList([C[4] || CT.C4], T._LocationL());
+    },
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[3] || CT.C3,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 64,
+        [_Location_file]: "file:///E:/Desenvolvimento%20Flutter/SDK/flutter/.pub-cache/hosted/pub.dartlang.org/rflutter_alert-1.1.0/lib/src/dialog_button.dart"
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "highlightColor",
+        [_Location_column]: 11,
+        [_Location_line]: 61,
+        [_Location_file]: null
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "splashColor",
+        [_Location_column]: 11,
+        [_Location_line]: 62,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 11,
+        [_Location_line]: 63,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 64,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C[6] = dart.constList([C[7] || CT.C7, C[8] || CT.C8, C[9] || CT.C9, C[10] || CT.C10], T._LocationL());
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[6] || CT.C6,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 60,
+        [_Location_file]: "file:///E:/Desenvolvimento%20Flutter/SDK/flutter/.pub-cache/hosted/pub.dartlang.org/rflutter_alert-1.1.0/lib/src/dialog_button.dart"
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 9,
+        [_Location_line]: 59,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 60,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C[12] = dart.constList([C[13] || CT.C13, C[14] || CT.C14], T._LocationL());
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[12] || CT.C12,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 58,
+        [_Location_file]: "file:///E:/Desenvolvimento%20Flutter/SDK/flutter/.pub-cache/hosted/pub.dartlang.org/rflutter_alert-1.1.0/lib/src/dialog_button.dart"
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 7,
+        [_Location_line]: 49,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "margin",
+        [_Location_column]: 7,
+        [_Location_line]: 50,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 7,
+        [_Location_line]: 51,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 7,
+        [_Location_line]: 52,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 7,
+        [_Location_line]: 53,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 58,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.constList([C[17] || CT.C17, C[18] || CT.C18, C[19] || CT.C19, C[20] || CT.C20, C[21] || CT.C21, C[22] || CT.C22], T._LocationL());
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[16] || CT.C16,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 48,
+        [_Location_file]: "file:///E:/Desenvolvimento%20Flutter/SDK/flutter/.pub-cache/hosted/pub.dartlang.org/rflutter_alert-1.1.0/lib/src/dialog_button.dart"
+      });
+    }
+  }, false);
+  var C = Array(23).fill(void 0);
+  var I = ["package:rflutter_alert/src/dialog_button.dart"];
+  var child$ = dart.privateName(dialog_button, "DialogButton.child");
+  var width$ = dart.privateName(dialog_button, "DialogButton.width");
+  var height$ = dart.privateName(dialog_button, "DialogButton.height");
+  var color$ = dart.privateName(dialog_button, "DialogButton.color");
+  var highlightColor$ = dart.privateName(dialog_button, "DialogButton.highlightColor");
+  var splashColor$ = dart.privateName(dialog_button, "DialogButton.splashColor");
+  var gradient$ = dart.privateName(dialog_button, "DialogButton.gradient");
+  var radius$ = dart.privateName(dialog_button, "DialogButton.radius");
+  var onPressed$ = dart.privateName(dialog_button, "DialogButton.onPressed");
+  var border$ = dart.privateName(dialog_button, "DialogButton.border");
+  var padding$ = dart.privateName(dialog_button, "DialogButton.padding");
+  var margin$ = dart.privateName(dialog_button, "DialogButton.margin");
+  var EdgeInsets_bottom = dart.privateName(edge_insets, "EdgeInsets.bottom");
+  var EdgeInsets_right = dart.privateName(edge_insets, "EdgeInsets.right");
+  var EdgeInsets_top = dart.privateName(edge_insets, "EdgeInsets.top");
+  var EdgeInsets_left = dart.privateName(edge_insets, "EdgeInsets.left");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  dialog_button.DialogButton = class DialogButton extends framework.StatelessWidget {
+    get child() {
+      return this[child$];
+    }
+    set child(value) {
+      super.child = value;
+    }
+    get width() {
+      return this[width$];
+    }
+    set width(value) {
+      super.width = value;
+    }
+    get height() {
+      return this[height$];
+    }
+    set height(value) {
+      super.height = value;
+    }
+    get color() {
+      return this[color$];
+    }
+    set color(value) {
+      super.color = value;
+    }
+    get highlightColor() {
+      return this[highlightColor$];
+    }
+    set highlightColor(value) {
+      super.highlightColor = value;
+    }
+    get splashColor() {
+      return this[splashColor$];
+    }
+    set splashColor(value) {
+      super.splashColor = value;
+    }
+    get gradient() {
+      return this[gradient$];
+    }
+    set gradient(value) {
+      super.gradient = value;
+    }
+    get radius() {
+      return this[radius$];
+    }
+    set radius(value) {
+      super.radius = value;
+    }
+    get onPressed() {
+      return this[onPressed$];
+    }
+    set onPressed(value) {
+      super.onPressed = value;
+    }
+    get border() {
+      return this[border$];
+    }
+    set border(value) {
+      super.border = value;
+    }
+    get padding() {
+      return this[padding$];
+    }
+    set padding(value) {
+      super.padding = value;
+    }
+    get margin() {
+      return this[margin$];
+    }
+    set margin(value) {
+      super.margin = value;
+    }
+    build(context) {
+      let t0, t0$, t0$0, t0$1, t0$2;
+      return new container.Container.new({padding: this.padding, margin: this.margin, width: this.width, height: this.height, decoration: new box_decoration.BoxDecoration.new({color: (t0 = this.color, t0 == null ? theme.Theme.of(context).accentColor : t0), gradient: this.gradient, borderRadius: (t0$ = this.radius, t0$ == null ? new border_radius.BorderRadius.circular(6.0) : t0$), border: (t0$0 = this.border, t0$0 == null ? box_border.Border.all({color: colors.Colors.transparent, width: 0.0}) : t0$0)}), child: new material.Material.new({color: colors.Colors.transparent, child: new ink_well.InkWell.new({highlightColor: (t0$1 = this.highlightColor, t0$1 == null ? theme.Theme.of(context).highlightColor : t0$1), splashColor: (t0$2 = this.splashColor, t0$2 == null ? theme.Theme.of(context).splashColor : t0$2), onTap: T.VoidToNvoid().as(this.onPressed), child: new basic.Center.new({child: this.child, $creationLocationd_0dea112b090073317d4: C[2] || CT.C2}), $creationLocationd_0dea112b090073317d4: C[5] || CT.C5}), $creationLocationd_0dea112b090073317d4: C[11] || CT.C11}), $creationLocationd_0dea112b090073317d4: C[15] || CT.C15});
+    }
+  };
+  (dialog_button.DialogButton.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let child = opts && 'child' in opts ? opts.child : null;
+    let width = opts && 'width' in opts ? opts.width : null;
+    let height = opts && 'height' in opts ? opts.height : 40;
+    let color = opts && 'color' in opts ? opts.color : null;
+    let highlightColor = opts && 'highlightColor' in opts ? opts.highlightColor : null;
+    let splashColor = opts && 'splashColor' in opts ? opts.splashColor : null;
+    let gradient = opts && 'gradient' in opts ? opts.gradient : null;
+    let radius = opts && 'radius' in opts ? opts.radius : null;
+    let border = opts && 'border' in opts ? opts.border : null;
+    let padding = opts && 'padding' in opts ? opts.padding : C[0] || CT.C0;
+    let margin = opts && 'margin' in opts ? opts.margin : C[1] || CT.C1;
+    let onPressed = opts && 'onPressed' in opts ? opts.onPressed : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[child$] = child;
+    this[width$] = width;
+    this[height$] = height;
+    this[color$] = color;
+    this[highlightColor$] = highlightColor;
+    this[splashColor$] = splashColor;
+    this[gradient$] = gradient;
+    this[radius$] = radius;
+    this[border$] = border;
+    this[padding$] = padding;
+    this[margin$] = margin;
+    this[onPressed$] = onPressed;
+    dialog_button.DialogButton.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = dialog_button.DialogButton.prototype;
+  dart.addTypeTests(dialog_button.DialogButton);
+  dart.addTypeCaches(dialog_button.DialogButton);
+  dart.setMethodSignature(dialog_button.DialogButton, () => ({
+    __proto__: dart.getMethods(dialog_button.DialogButton.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(dialog_button.DialogButton, I[0]);
+  dart.setFieldSignature(dialog_button.DialogButton, () => ({
+    __proto__: dart.getFields(dialog_button.DialogButton.__proto__),
+    child: dart.finalFieldType(dart.legacy(framework.Widget)),
+    width: dart.finalFieldType(dart.legacy(core.double)),
+    height: dart.finalFieldType(dart.legacy(core.double)),
+    color: dart.finalFieldType(dart.legacy(ui.Color)),
+    highlightColor: dart.finalFieldType(dart.legacy(ui.Color)),
+    splashColor: dart.finalFieldType(dart.legacy(ui.Color)),
+    gradient: dart.finalFieldType(dart.legacy(gradient.Gradient)),
+    radius: dart.finalFieldType(dart.legacy(border_radius.BorderRadius)),
+    onPressed: dart.finalFieldType(dart.legacy(core.Function)),
+    border: dart.finalFieldType(dart.legacy(box_border.BoxBorder)),
+    padding: dart.finalFieldType(dart.legacy(edge_insets.EdgeInsets)),
+    margin: dart.finalFieldType(dart.legacy(edge_insets.EdgeInsets))
+  }));
+  dart.trackLibraries("packages/rflutter_alert/src/dialog_button.dart", {
+    "package:rflutter_alert/src/dialog_button.dart": dialog_button
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["dialog_button.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAce;;;;;;IACA;;;;;;IACA;;;;;;IACD;;;;;;IACA;;;;;;IACA;;;;;;IACG;;;;;;IACI;;;;;;IACJ;;;;;;IACC;;;;;;IACC;;;;;;IACA;;;;;;UAqBS;;AACxB,YAAO,uCACI,sBACD,oBACD,oBACC,yBACI,8CACK,iBAAN,aAAe,AAAY,eAAT,OAAO,+BACtB,8BACW,mBAAP,cAAuB,wCAAS,sBAC/B,oBAAP,eAAiB,8BAAkB,kCAAoB,wBAC5D,kCACS,kCACP,2CAC0B,4BAAf,eAAwB,AAAY,eAAT,OAAO,wCACzB,yBAAZ,eAAqB,AAAY,eAAT,OAAO,iDACrC,wBACA,6BACE;IAKjB;;;QAxCM;QACW;QACV;QACA;QACA;QACA;QACA;QACA;QACA;QACA;QACA;QACA;QACU;;IAXA;IACV;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACU;AACZ,8DAAW,GAAG;;EAAC","file":"../../../../../../../../../packages/rflutter_alert/src/dialog_button.dart.lib.js"}');
+  // Exports:
+  return {
+    src__dialog_button: dialog_button
+  };
+}));
+
+//# sourceMappingURL=dialog_button.dart.lib.js.map
